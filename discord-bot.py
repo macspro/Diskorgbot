@@ -81,7 +81,6 @@ async def on_message(message):
 
 
 
-bot.run('ODQ0NjIzNTQzMzc5MTY1MjQ1.YKVG-Q.U15lhzUH1mbddneDrwltqIYQO8U')
 token - os.environ.get('BOT_TOKEN')
 bot.run(str(token))
 # {message.author.mention}
@@ -99,4 +98,3 @@ bot.run(str(token))
 # async def ping(ctx):
 #     await ctx.send('pong')
 #
-# bot.run('ODQ0NjIzNTQzMzc5MTY1MjQ1.YKVG-Q.U15lhzUH1mbddneDrwltqIYQO8U')
