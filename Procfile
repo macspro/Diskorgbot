@@ -1,0 +1,1 @@
+worker: ython discord-bot.py
