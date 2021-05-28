@@ -71,12 +71,12 @@ async def on_message(message):
             find_lox = True
     if (find_lox):
         await message.channel.send(f'  не матюкайся{message.author.mention} !') # рекация на "матюк" слово
-#     find_help = False
-#     for item in help:
-#         if msg.find(item) >= 0:
-#             find_help = True
-#     if (find_help):
-#         await message.channel.send(f' Список слов за которые дается мут (5 часов)` "нигер", "нига", "пидор", "ебал", "говноед", "мразь"` ')
+    find_help = False
+    for item in help:
+        if msg.find(item) >= 0:
+            find_help = True
+    if (find_help):
+        await message.channel.send(f' Список слов за которые дается мут (5 часов)` "нигер", "нига", "пидор", "ебал", "говноед", "мразь"` ')
 
 
 
