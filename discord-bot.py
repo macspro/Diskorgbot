@@ -4,9 +4,10 @@ import discord
 from discord.ext import commands
 import asyncio
 from discord.utils import get
-
-if message.content.startswith('$help'):
-  await message.channel.send(' Список слов за которые дается мут (5 часов)`"нигер", "нига", "пидор", "ебал", "говноед", "мразь" ')
+@client.event
+async def on_message(message):
+  if message.content.startswith('$help'):
+    await message.channel.send(' Список слов за которые дается мут (5 часов)`"нигер", "нига", "пидор", "ебал", "говноед", "мразь" ')
 
 bye = ["bye", "goodbye", "poca", "poka", "пока", "гудбай", "бувай", "допобачення", "досвидания", "астала", "виста", "иди в мут", "я спать", "я пошел", " гуд бай", "астала виста", "я ухожу"]     # создаем список "привет" слов
 
