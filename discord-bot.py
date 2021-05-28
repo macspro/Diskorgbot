@@ -24,7 +24,7 @@ async def on_ready():
 async  def  on_message(msg):
     if msg.content == "?help":
         await message.channel.send(f' Список слов за которые дается мут (5 часов)` "нигер", "нига", "пидор", "ебал", "говноед", "мразь", "пидор", "пидар", "еблан", "уебок", "пиздабол", "ебло", "ебало", "долбоящер", "мать в канаве", "мать ебал", "мамку ебал", "ебал мамку", "твой отчим", "мамка в канаве", "отчим твой"` {message.author.mention} ')
-
+        await message.channel.send("По всем вопросам писать админу(Max0n)")
 @bot.event
 async def on_message(message):
     if message.author == bot.user:  # ignores itself
