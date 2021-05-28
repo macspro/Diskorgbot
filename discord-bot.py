@@ -5,11 +5,14 @@ from discord.ext import commands
 import asyncio
 from discord.utils import get
 
+if message.content.startswith('$help'):
+        await message.channel.send(' Список слов за которые дается мут (5 часов)` "нигер", "нига", "пидор", "ебал", "говноед", "мразь"` ')
+
 bye = ["bye", "goodbye", "poca", "poka", "пока", "гудбай", "бувай", "допобачення", "досвидания", "астала", "виста", "иди в мут", "я спать", "я пошел", " гуд бай", "астала виста", "я ухожу"]     # создаем список "привет" слов
 
 hello = ["hi", "hello", "privet", "привет", "хай", "халоу", "воц", "ап", "whats", "up", "привіт", "салам", "вос", "ап", "доброго времени суток", "малам алекум", "всем хай", "всем привет", "я новенький", "я пришел", "я вернулся", "приветули"] # создаес список "пока" слов
 
-forbidden_words = ["нигер", "нига", "пидор", "ебал", "говноед", "мразь" ]  # you can add as many words as you like, but make sure they are all lower case
+forbidden_words = ["нигер", "нига", "пидор", "ебал", "говноед", "мразь", "пидор", "пидар", "еблан", "уебок", "пиздабол", "ебло", "ебало", "долбоящер", "мать в канаве", "мать ебал", "мамку ебал", "ебал мамку", "твой отчим", "мамка в канаве", "отчим твой" ]  # you can add as many words as you like, but make sure they are all lower case
 lox = ["лох", "лошара", "бля", "даун", "дебил", "дибил" ]
 help = ["?help", "?what", "?pomogi", "?помощь", "?помоги", ]
 
@@ -70,12 +73,12 @@ async def on_message(message):
             find_lox = True
     if (find_lox):
         await message.channel.send(f'  не матюкайся{message.author.mention} !') # рекация на "матюк" слово
-    find_help = False
-    for item in help:
-        if msg.find(item) >= 0:
-            find_help = True
-    if (find_help):
-        await message.channel.send(f' Список слов за которые дается мут (5 часов)` "нигер", "нига", "пидор", "ебал", "говноед", "мразь"` ')
+#     find_help = False
+#     for item in help:
+#         if msg.find(item) >= 0:
+#             find_help = True
+#     if (find_help):
+#         await message.channel.send(f' Список слов за которые дается мут (5 часов)` "нигер", "нига", "пидор", "ебал", "говноед", "мразь"` ')
 
 
 
@@ -83,18 +86,9 @@ async def on_message(message):
 
 token = os.environ.get('BOT_TOKEN')
 bot.run(str(token))
-# {message.author.mention}
 
 
 
 
 
-# import discord
-# from discord.ext import commands
-#
-# bot = commands.Bot(command_prefix='>')
-#
-# @bot.command()
-# async def ping(ctx):
-#     await ctx.send('pong')
-#
+
