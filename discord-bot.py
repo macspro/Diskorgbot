@@ -42,7 +42,7 @@ async def on_message(message):
             await bot.get_channel(846050353899765771).send(f"Message was deleted in {message.channel.mention} by {message.author.mention}:\n`{message.content}`")
             await asyncio.sleep(18000)
             await message.author.remove_roles(get(message.guild.roles, id=846083325672161332), reason=f"Mute has expired")
-   if for_help == True:
+    if for_help == True:
          await asyncio.sleep(20)
          await message.channel.send("Есть вопросы? Напиши ?help")
                   
