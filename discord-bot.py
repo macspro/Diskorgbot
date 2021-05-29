@@ -6,8 +6,6 @@ import asyncio
 from discord.utils import get
 from discord.ext import tasks
 
-my_loop.start()
-
 for_help = True 
 
 bye = ["bye", "goodbye", "poca", "poka", "пока", "гудбай", "бувай", "допобачення", "досвидания", "астала", "виста", "иди в мут", "я спать", "я пошел", " гуд бай", "астала виста", "я ухожу"]     # создаем список "привет" слов
