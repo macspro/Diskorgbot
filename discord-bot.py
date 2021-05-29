@@ -43,8 +43,8 @@ async def on_message(message):
             await asyncio.sleep(18000)
             await message.author.remove_roles(get(message.guild.roles, id=846083325672161332), reason=f"Mute has expired")
    if for_help == True:
-          await asyncio.sleep(20)
-           await message.channel.send("Есть вопросы? Напиши ?help")
+         await asyncio.sleep(20)
+         await message.channel.send("Есть вопросы? Напиши ?help")
                   
          
          
