@@ -53,8 +53,8 @@ async def on_message(message):
     # print(hello)
     # print(list(set(msg_list + hello)))
     # print(len(set(msg_list + hello)))
-msg = message.content.lower()
-msg_list = msg.split()
+         msg = message.content.lower()
+         msg_list = msg.split()
 
 
 
