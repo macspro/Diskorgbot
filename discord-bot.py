@@ -4,11 +4,9 @@ import discord
 from discord.ext import commands
 import asyncio
 from discord.utils import get
-from discord.ext import tasks
+rom discord.ext import commands, tasks
 
-@tasks.loop(seconds=8)
-async def message():
-    await bot.get_channel(844615914242310167).send("hello")
+
 
 for_help = True 
 
@@ -23,6 +21,10 @@ lox = ["лох", "лошара", "бля", "даун", "дебил", "дибил
 help = ["?help", "?what", "?pomogi", "?помощь", "?помоги", ]
 
 bot = commands.Bot(command_prefix='!')
+
+tasks.loop(seconds=8)
+async def message():
+    await bot.get_channel(844615914242310167).send("hello")
 
 @bot.event
 async def on_ready():
