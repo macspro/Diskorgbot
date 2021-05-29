@@ -43,8 +43,7 @@ async def on_message(message):
             await asyncio.sleep(18000)
             await message.author.remove_roles(get(message.guild.roles, id=846083325672161332), reason=f"Mute has expired")
     if for_help == True:
-         await asyncio.sleep(20)
-         await message.channel.send("Есть вопросы? Напиши ?help")
+      
                   
          
          
@@ -79,6 +78,11 @@ async def on_message(message):
     for item in help:
         if msg.find(item) >= 0:
             find_help = True
+    if (find_help):
+        await message.channel.send(f' Правила чата/n1) Мат запрещен(мут 30мин)/nреклама запрещена(бан навсегда)/nПорнографические материалы запрещены(бан навседа) {message.author.mention} !') # рекация на "матюк" слово
+    find_help = False
+                  
+                  
   
 
 
