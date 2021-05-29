@@ -79,8 +79,12 @@ async def on_message(message):
         if msg.find(item) >= 0:
             find_help = True
     if (find_help):
-        await message.channel.send(f' Правила чата /n 1) Мат запрещен(мут 30мин) /n реклама запрещена(бан навсегда) /n Порнографические материалы запрещены(бан навседа) {message.author.mention} !') # рекация на "матюк" слово
-    find_help = False
+        await message.channel.send(f' Правила чата /n 1) Мат запрещен(мут 30мин) /n реклама запрещена(бан навсегда) /n Порнографические материалы запрещены(бан навседа) {message.author.mention} !') # рекация на "help" слово
+        await message.channel.send("Правила чата")
+        await message.channel.send("Мат запрещен(мут 30мин)")
+        await message.channel.send("Реклама запрещена(Мут на 14 дней)")
+        await message.channel.send("Порнографические материалы запрещены(бан навседа)")
+         find_help = False
                   
                   
   
