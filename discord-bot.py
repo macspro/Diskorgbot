@@ -6,6 +6,10 @@ import asyncio
 from discord.utils import get
 from discord.ext import tasks
 
+@tasks.loop(seconds=8)
+async def message():
+    await bot.get_channel(844615914242310167).send("hello")
+
 for_help = True 
 
 bye = ["bye", "goodbye", "poca", "poka", "пока", "гудбай", "бувай", "допобачення", "досвидания", "астала", "виста", "иди в мут", "я спать", "я пошел", " гуд бай", "астала виста", "я ухожу"]     # создаем список "привет" слов
