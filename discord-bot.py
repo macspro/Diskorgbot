@@ -5,9 +5,6 @@ from discord.ext import commands
 import asyncio
 from discord.utils import get
 from discord.ext import tasks
-@tasks.loop(seconds=5)
-async def my_loop():
-         await bot.get_channel(844615914242310167).send(f "Есть вопросы? напиши ?help")
 
 my_loop.start()
 
