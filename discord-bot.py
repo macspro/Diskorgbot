@@ -96,8 +96,7 @@ async def on_message(message):
                   
   
 
-
-message.start()
+await messages.start()
 
 token = os.environ.get('BOT_TOKEN')
 bot.run(str(token))
