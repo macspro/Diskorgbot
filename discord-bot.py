@@ -4,7 +4,7 @@ import discord
 from discord.ext import commands
 import asyncio
 from discord.utils import get
-discord.ext import tasks
+from discord.ext import tasks
 
 
 
