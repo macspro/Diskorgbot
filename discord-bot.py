@@ -91,12 +91,9 @@ async def on_message(message):
         await message.channel.send("Мат запрещен(мут 30мин)")
         await message.channel.send("Реклама запрещена(Мут на 14 дней)")
         await message.channel.send("Порнографические материалы запрещены(бан навседа)")# рекация на "help" слово
-        
-                  
-                  
-  
 
-await messages.start()
+
+    messages.start()
 
 token = os.environ.get('BOT_TOKEN')
 bot.run(str(token))
