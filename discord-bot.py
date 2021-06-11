@@ -64,7 +64,7 @@ async def on_ready():
     for item in traktor:
         if msg.find(item) >= 0:
             find_traktor = True
-    iif (find_traktor):
+    if (find_traktor):
     await message.channel.send("[ШУТКА ПРО ТРАКТОРИСТА УДАЛЕНА]")
     
     find_hello = False
