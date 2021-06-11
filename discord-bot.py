@@ -5,9 +5,6 @@ from discord.ext import commands
 import asyncio
 from discord.utils import get
 from discord.ext import tasks
-# if message.content.startswith('300'):
-#     await message.channel.send(f'[шутка про тракториста удалена]')
-
 
 
 for_help = True 
@@ -35,8 +32,7 @@ async def message():
          
 async def on_ready():
     print(f'Logged in as {bot.user}') # выводим информцию о успешном подключении бота
-async  def  on_message(msg):
-         @bot.event
+ @bot.event
 async def on_message(message):
     if message.author == bot.user:  # ignores itself
         return
