@@ -60,7 +60,7 @@ async def on_ready():
          msg = message.content.lower()
          msg_list = msg.split()
          
-         find_traktor = False
+    find_traktor = False
     for item in traktor:
         if msg.find(item) >= 0:
             find_traktor = True
