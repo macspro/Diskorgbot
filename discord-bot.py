@@ -36,9 +36,7 @@ async def message():
 async def on_ready():
     print(f'Logged in as {bot.user}') # выводим информцию о успешном подключении бота
 async  def  on_message(msg):
-         
-         
-@bot.event
+         @bot.event
 async def on_message(message):
     if message.author == bot.user:  # ignores itself
         return
