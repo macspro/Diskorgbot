@@ -6,7 +6,7 @@ import asyncio
 from discord.utils import get
 from discord.ext import tasks
 if message.content.startswith('300'):
-        await message.channel.send(f'[шутка про тракториста удалена]')
+    await message.channel.send(f'[шутка про тракториста удалена]')
 
 
 
