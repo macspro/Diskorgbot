@@ -68,7 +68,7 @@ async def on_ready():
         await message.channel.send(f'[ШУТКА ПРО ТРАКТОРИСТА УДАЛЕНА]') # реакция на "300" слово
 
 
-         find_hello = False
+    find_hello = False
     for item in hello:
          if msg.find(item) >= 0:
              find_hello = True
