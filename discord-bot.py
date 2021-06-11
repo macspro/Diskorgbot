@@ -89,7 +89,7 @@ async def on_ready():
         await message.channel.send("Мат запрещен(мут 30мин)")
         await message.channel.send("Реклама запрещена(Мут на 14 дней)")
         await message.channel.send("Порнографические материалы запрещены(бан навседа)")# рекация на "help" слово
-         find_traktor = False
+    find_traktor = False
     for item in traktor:
         if msg.find(item) >= 0:
             find_traktor = True
