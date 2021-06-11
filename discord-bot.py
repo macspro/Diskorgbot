@@ -27,8 +27,7 @@ async def message():
     await bot.get_channel(844615914242310167).send("hello")
 
 @bot.event
-if msg == "300":
-          await message.channel.send(f "[шутка про ьракториста удалена]")
+
          
 async def on_ready():
     print(f'Logged in as {bot.user}') # выводим информцию о успешном подключении бота
