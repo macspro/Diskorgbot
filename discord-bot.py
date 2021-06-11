@@ -72,8 +72,8 @@ for item in hello:
    
          if msg.find(item) >= 0:
              find_hello = True
-    if (find_hello):
-         await message.channel.send(f'  Привет {message.author.mention} !') # рекация на "привет" слово
+         if (find_hello):
+             await message.channel.send(f'  Привет {message.author.mention} !') # рекация на "привет" слово
     find_bye = False
     for item in bye:
         if msg.find(item) >= 0:
