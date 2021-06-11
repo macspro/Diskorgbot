@@ -59,6 +59,14 @@ async def on_ready():
     # print(len(set(msg_list + hello)))
          msg = message.content.lower()
          msg_list = msg.split()
+         
+         find_traktor = False
+    for item in traktor:
+        if msg.find(item) >= 0:
+            find_traktor = True
+    if (find_traktor):
+        await message.channel.send(f'[ШУТКА ПРО ТРАКТОРИСТА УДАЛЕНА]') # реакция на "300" слово
+
 
          find_hello = False
          for item in hello:
@@ -89,13 +97,7 @@ async def on_ready():
         await message.channel.send("Мат запрещен(мут 30мин)")
         await message.channel.send("Реклама запрещена(Мут на 14 дней)")
         await message.channel.send("Порнографические материалы запрещены(бан навседа)")# рекация на "help" слово
-    find_traktor = False
-    for item in traktor:
-        if msg.find(item) >= 0:
-            find_traktor = True
-    if (find_traktor):
-        await message.channel.send(f'[ШУТКА ПРО ТРАКТОРИСТА УДАЛЕНА]') # реакция на "300" слово
-
+    
 
     messages.start()
 
