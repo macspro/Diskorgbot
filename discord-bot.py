@@ -1,4 +1,5 @@
 import os
+
 import discord
 from discord.ext import commands
 import asyncio
@@ -6,9 +7,8 @@ from discord.utils import get
 from discord.ext import tasks
 
 
-for_help = True 
 
-traktor = ["300", "триста", "три сотни" ,"150 + 150"]
+for_help = True 
 
 bye = ["bye", "goodbye", "poca", "poka", "пока", "гудбай", "бувай", "допобачення", "досвидания", "астала", "виста", "иди в мут", "я спать", "я пошел", " гуд бай", "астала виста", "я ухожу"]     # создаем список "привет" слов
 
@@ -27,6 +27,16 @@ async def message():
     await bot.get_channel(844615914242310167).send("hello")
 
 @bot.event
+if msg == "300":
+          await message.channel.send(f "[шутка про ьракториста удалена]")
+         
+async def on_ready():
+    print(f'Logged in as {bot.user}') # выводим информцию о успешном подключении бота
+async  def  on_message(msg):
+    if message.content.lower().startswith("?help"):
+         await message.channel.send(f'Список слов за которые дается мут (5 часов) "нигер", "нига", "пидор", "ебал", "говноед", "мразь", "пидор", "пидар", "еблан", "уебок", "пиздабол", "ебло", "ебало", "долбоящер", "мать в канаве", "мать ебал", "мамку ебал", "ебал мамку", "твой отчим", "мамка в канаве", "отчим твой" {message.author.mention}\nПо всем вопросам писать админу(Max0n)')
+
+@bot.event
 async def on_message(message):
     if message.author == bot.user:  # ignores itself
         return
@@ -34,10 +44,6 @@ async def on_message(message):
         return
     if message.guild == None:  # ignores dms
         return
-
-         
-async def on_ready():
-    print(f'Logged in as {bot.user}') # выводим информцию о успешном подключении бота
 
     for word in forbidden_words:
         if word in message.content.lower():
@@ -58,22 +64,13 @@ async def on_ready():
     # print(len(set(msg_list + hello)))
          msg = message.content.lower()
          msg_list = msg.split()
-         
-    find_traktor = False
-    for item in traktor:
-        if msg.find(item) >= 0:
-            find_traktor = True
-        if (find_traktor):
-            await message.channel.send("[ШУТКА ПРО ТРАКТОРИСТА УДАЛЕНА]")
-    
-    find_hello = False
 
-for item in hello:
-   
-         if msg.find(item) >= 0:
-             find_hello = True
-         if (find_hello):
-             await message.channel.send(f'  Привет {message.author.mention} !') # рекация на "привет" слово
+         find_hello = False
+         for item in hello:
+                  if msg.find(item) >= 0:
+                           find_hello = True
+                           if (find_hello):
+                                    await message.channel.send(f'  Привет {message.author.mention} !') # рекация на "привет" слово
     find_bye = False
     for item in bye:
         if msg.find(item) >= 0:
@@ -97,15 +94,11 @@ for item in hello:
         await message.channel.send("Мат запрещен(мут 30мин)")
         await message.channel.send("Реклама запрещена(Мут на 14 дней)")
         await message.channel.send("Порнографические материалы запрещены(бан навседа)")# рекация на "help" слово
-    
+
 
     messages.start()
 
 token = os.environ.get('BOT_TOKEN')
 bot.run(str(token))
-
-
-
-
 
 
