@@ -28,11 +28,6 @@ async def message():
     await bot.get_channel(844615914242310167).send("hello")
 
 @bot.event
-
-         
-async def on_ready():
-    print(f'Logged in as {bot.user}') # выводим информцию о успешном подключении бота
- @bot.event
 async def on_message(message):
     if message.author == bot.user:  # ignores itself
         return
@@ -40,6 +35,10 @@ async def on_message(message):
         return
     if message.guild == None:  # ignores dms
         return
+
+         
+async def on_ready():
+    print(f'Logged in as {bot.user}') # выводим информцию о успешном подключении бота
 
     for word in forbidden_words:
         if word in message.content.lower():
