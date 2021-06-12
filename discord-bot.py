@@ -22,9 +22,9 @@ help = ["?help", "?what", "?pomogi", "?помощь", "?помоги", ]
 
 bot = commands.Bot(command_prefix='!')
 
-tasks.loop(seconds=8)
-async def message():
-    await bot.get_channel(844615914242310167).send("hello")
+# # tasks.loop(seconds=8)
+# # async def message():
+#     await bot.get_channel(844615914242310167).send("hello")
 
 @bot.event
 async def on_ready():
@@ -99,7 +99,7 @@ async def on_message(message):
         await message.channel.send(f'[ШУТКА ПРО ТРАКТОРИСТА УДАЛЕНА]') # реакция на "300" слово
 
 
-    messages.start()
+#     messages.start()
 
 token = os.environ.get('BOT_TOKEN')
 bot.run(str(token))
