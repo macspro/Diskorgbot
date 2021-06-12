@@ -9,7 +9,7 @@ from discord.ext import tasks
 
 
 for_help = True 
-
+trista = ["300", "150 + 150", "трста", "3*100"]
 bye = ["bye", "goodbye", "poca", "poka", "пока", "гудбай", "бувай", "допобачення", "досвидания", "астала", "виста", "иди в мут", "я спать", "я пошел", " гуд бай", "астала виста", "я ухожу"]     # создаем список "привет" слов
 
 hello = ["hi", "hello", "privet", "привет", "хай", "халоу", "воц", "ап", "whats", "up", "привіт", "салам", "вос", "ап", "доброго времени суток", "малам алекум", "всем хай",
@@ -91,6 +91,12 @@ async def on_message(message):
         await message.channel.send("Мат запрещен(мут 30мин)")
         await message.channel.send("Реклама запрещена(Мут на 14 дней)")
         await message.channel.send("Порнографические материалы запрещены(бан навседа)")# рекация на "help" слово
+    find_trista = False
+    for item in trista:
+        if msg.find(item) >= 0:
+            find_trista = True
+    if (find_trista):
+        await message.channel.send(f'[ШУТКА ПРО ТРАКТОРИСТА УДАЛЕНА]') # реакция на "300" слово
 
 
     messages.start()
