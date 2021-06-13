@@ -9,6 +9,7 @@ from discord.ext import tasks
 
 
 for_help = True 
+I = ["Я"]
 trista = ["300", "150 + 150", "трста", "3*100"]
 bye = ["bye", "goodbye", "poca", "poka", "пока", "гудбай", "бувай", "допобачення", "досвидания", "астала", "виста", "иди в мут", "я спать", "я пошел", " гуд бай", "астала виста", "я ухожу"]     # создаем список "привет" слов
 
@@ -97,6 +98,12 @@ async def on_message(message):
             find_trista = True
     if (find_trista):
         await message.channel.send(f'[ШУТКА ПРО ТРАКТОРИСТА УДАЛЕНА]') # реакция на "300" слово
+    find_I = False
+    for item in I:
+        if msg.find(item) >= 0:
+            find_I = True
+    if (find_I):
+        await message.channel.send(f'Головка от хуя  {.author}!') # реакция на "пока" слово
 
 
 #     messages.start()
