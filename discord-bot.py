@@ -62,7 +62,7 @@ async def on_message(message):
         if word in message.content.lower():
             await message.delete()
             await message.author.add_roles(get(message.guild.roles, id=846083325672161332),reason=f"He said a forbidden word")
-            await bot.get_channel(846050353899765771).send(f"Message was deleted in {message.channel.mention} by {message.author.mention}:\n`{message.content}`")
+            await bot.get_channel(853564879869050880).send(f"Message was deleted in {message.channel.mention} by {message.author.mention}:\n`{message.content}`")
             await asyncio.sleep(18000)
             await message.author.remove_roles(get(message.guild.roles, id=846083325672161332), reason=f"Mute has expired")
     if for_help == True:
