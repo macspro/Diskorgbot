@@ -42,7 +42,7 @@ async  def  on_message(msg):
 async def on_ready():
     global mainchannel # если переменную не сделать глобальной, её нельзя будет использовать из других функций
     global bot_message_count
-    mainchannel = bot.get_channel(844615914242310167) # определяем канал на нашем сервере
+    mainchannel = bot.get_channel(853564879869050880) # определяем канал на нашем сервере
     gr = 'Я работаю, а ты нет'
     await mainchannel.send(gr, delete_after=30) # отправляем в чат сообщение о запуске бота с помощью send(), которое удалится через 30 секунд
     print(gr) # отправляем его также в консоль
