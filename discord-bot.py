@@ -35,6 +35,17 @@ async  def  on_message(msg):
          await message.channel.send(f'Список слов за которые дается мут (5 часов) "нигер", "нига", "пидор", "ебал", "говноед", "мразь", "пидор", "пидар", "еблан", "уебок", "пиздабол", "ебло", "ебало", "долбоящер", "мать в канаве", "мать ебал", "мамку ебал", "ебал мамку", "твой отчим", "мамка в канаве", "отчим твой" {message.author.mention}\nПо всем вопросам писать админу(Max0n)')
 
 @bot.event
+async def on_ready():
+    global mainchannel # если переменную не сделать глобальной, её нельзя будет использовать из других функций
+    global bot_message_count
+    mainchannel = bot.get_channel(844615914242310167) # определяем канал на нашем сервере
+    gr = 'Я работаю, а ты нет'
+    await mainchannel.send(gr, delete_after=30) # отправляем в чат сообщение о запуске бота с помощью send(), которое удалится через 30 секунд
+    print(gr) # отправляем его также в консоль
+
+    activity = discord.Activity(name=f"Я в разработке")
+    await bot.change_presence(status=discord.Status.online, activity=activity) # меняем боту статус
+@bot.event
 async def on_message(message):
     if message.author == bot.user:  # ignores itself
         return
