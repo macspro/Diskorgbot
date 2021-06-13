@@ -29,7 +29,11 @@ bot = commands.Bot(command_prefix='!')
 
 @bot.event
 async def on_ready():
-    print(f'Logged in as {bot.user}') # выводим информцию о успешном подключении бота
+    global mainchannel # если переменную не сделать глобальной, её нельзя будет использовать из других функций
+    global bot_message_count
+    mainchannel = bot.get_channel(844615914242310167) # определяем канал на нашем сервере
+    gr = 'Я работаю, а ты нет'
+    await mainchannel.send(gr, delete_after=30) # отправ
 async  def  on_message(msg):
     if message.content.lower().startswith("?help"):
          await message.channel.send(f'Список слов за которые дается мут (5 часов) "нигер", "нига", "пидор", "ебал", "говноед", "мразь", "пидор", "пидар", "еблан", "уебок", "пиздабол", "ебло", "ебало", "долбоящер", "мать в канаве", "мать ебал", "мамку ебал", "ебал мамку", "твой отчим", "мамка в канаве", "отчим твой" {message.author.mention}\nПо всем вопросам писать админу(Max0n)')
