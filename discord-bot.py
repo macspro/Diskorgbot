@@ -31,8 +31,8 @@ bot = commands.Bot(command_prefix='!')
 async def on_ready():
     global mainchannel # если переменную не сделать глобальной, её нельзя будет использовать из других функций
     global bot_message_count
-    mainchannel = bot.get_channel(844615914242310167) # определяем канал на нашем сервере
-    gr = 'Я работаю, а ты нет'
+    mainchannel = bot.get_channel(853564879869050880) # определяем канал на нашем сервере
+    gr = 'Бот успешно запущен!'
     await mainchannel.send(gr, delete_after=30) # отправ
 async  def  on_message(msg):
     if message.content.lower().startswith("?help"):
