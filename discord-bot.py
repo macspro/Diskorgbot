@@ -98,6 +98,7 @@ async def on_message(message):
             find_trista = True
     if (find_trista):
         await message.channel.send(f'[ШУТКА ПРО ТРАКТОРИСТА УДАЛЕНА]') # реакция на "300" слово
+
     find_I = False
     for item in I:
         if msg.find(item) >= 0:
