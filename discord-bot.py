@@ -103,7 +103,7 @@ async def on_message(message):
         if msg.find(item) >= 0:
             find_I = True
     if (find_I):
-        await ctx.reply('Головка от хуя', mention_author=False) # реакция на "пока" слово
+        await message.channel.send('Головка от хуя', mention_author=False) # реакция на "пока" слово
 
 
 #     messages.start()
